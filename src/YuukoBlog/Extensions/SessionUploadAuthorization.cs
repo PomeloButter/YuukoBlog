@@ -8,16 +8,16 @@ namespace YuukoBlog.Extensions
 {
     public class SessionUploadAuthorization : IBlobUploadAuthorizationProvider
     {
-        private IServiceProvider services;
+        private readonly IServiceProvider _services;
 
         public SessionUploadAuthorization(IServiceProvider provider)
         {
-            services = provider;
+            _services = provider;
         }
 
         public bool IsAbleToUpload()
         {
-            var val = services.GetRequiredService<IHttpContextAccessor>().HttpContext.Session.GetString("Admin");
+            var val = _services.GetRequiredService<IHttpContextAccessor>().HttpContext.Session.GetString("Admin");
             if (val == "true")
                 return true;
             return false;

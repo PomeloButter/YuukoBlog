@@ -47,10 +47,10 @@ namespace YuukoBlog.Controllers
         [GuestRequired]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(string Username, string Password)
+        public IActionResult Login(string username, string password)
         {
             var tmp = Configuration["Account"];
-            if (Username == Configuration["Account"] && Password == Configuration["Password"])
+            if (username == Configuration["Account"] && password == Configuration["Password"])
             {
                 HttpContext.Session.SetString("Admin", "true");
                 return RedirectToAction("Index", "Admin");
@@ -69,8 +69,7 @@ namespace YuukoBlog.Controllers
         {
             var post = DB.Posts
                 .Include(x => x.Tags)
-                .Where(x => x.Url == id)
-                .SingleOrDefault();
+                .SingleOrDefault(x => x.Url == id);
             if (post == null)
                 return Prompt(x =>
                 {
@@ -89,7 +88,7 @@ namespace YuukoBlog.Controllers
                 {
                     for (var i = 0; i < 16; i++)
                     {
-                        if (tmp[i].IndexOf("```") == 0)
+                        if (tmp[i].IndexOf("```", StringComparison.Ordinal) == 0)
                             flag = !flag;
                         summary += tmp[i] + '\n';
                     }
@@ -127,8 +126,7 @@ namespace YuukoBlog.Controllers
         public IActionResult PostDelete(string id)
         {
             var post = DB.Posts
-                .Include(x => x.Tags)
-                .Where(x => x.Url == id).SingleOrDefault();
+                .Include(x => x.Tags).SingleOrDefault(x => x.Url == id);
             
             if (post == null)
                 return Prompt(x =>
@@ -189,7 +187,7 @@ namespace YuukoBlog.Controllers
         [Route("Admin/Catalog/Delete")]
         public IActionResult CatalogDelete(string id)
         {
-            var catalog = DB.Catalogs.Where(x => x.Url == id).SingleOrDefault();
+            var catalog = DB.Catalogs.SingleOrDefault(x => x.Url == id);
             if (catalog == null)
                 return Prompt(x =>
                 {
@@ -208,9 +206,9 @@ namespace YuukoBlog.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Route("Admin/Catalog/Edit")]
-        public IActionResult CatalogEdit(string id, string newId, string title, int pri)
+        public IActionResult CatalogEdit(string id, string newId, string title, int order)
         {
-            var catalog = DB.Catalogs.Where(x => x.Url == id).SingleOrDefault();
+            var catalog = DB.Catalogs.SingleOrDefault(x => x.Url == id);
             if (catalog == null)
                 return Prompt(x =>
                 {
@@ -222,7 +220,7 @@ namespace YuukoBlog.Controllers
                 });
             catalog.Url = newId;
             catalog.Title = title;
-            catalog.PRI = pri;
+            catalog.PRI = order;
             DB.SaveChanges();
             return Content("true");
         }

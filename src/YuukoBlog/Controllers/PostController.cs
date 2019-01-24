@@ -12,8 +12,7 @@ namespace YuukoBlog.Controllers
             var post = DB.Posts
                 .Include(x => x.Catalog)
                 .Include(x => x.Tags)
-                .Where(x => x.Url == id && !x.IsPage)
-                .SingleOrDefault();
+                .SingleOrDefault(x => x.Url == id && !x.IsPage);
             if (post == null)
                 return Prompt(x =>
                 {
@@ -32,8 +31,7 @@ namespace YuukoBlog.Controllers
         public IActionResult Page(string id)
         {
             var post = DB.Posts
-                .Where(x => x.Url == id && x.IsPage)
-                .SingleOrDefault();
+                .SingleOrDefault(x => x.Url == id && x.IsPage);
             if (post == null)
                 return Prompt(x =>
                 {

@@ -35,8 +35,7 @@ namespace YuukoBlog.Controllers
         public IActionResult Catalog(string id, int p = 1)
         {
             var catalog = DB.Catalogs
-                .Where(x => x.Url == id)
-                .SingleOrDefault();
+                .SingleOrDefault(x => x.Url == id);
             if (catalog == null)
                 return Prompt(x =>
                 {
@@ -76,10 +75,10 @@ namespace YuukoBlog.Controllers
                     .OrderByDescending(x => x.Time), 5, "Home");
         }
 
-        public IActionResult Template(string Folder, [FromHeader] string Referer)
+        public IActionResult Template(string folder, [FromHeader] string referer)
         {
-            Cookies["ASPNET_TEMPLATE"] = Folder;
-            return Redirect(Referer ?? "/");
+            Cookies["ASPNET_TEMPLATE"] = folder;
+            return Redirect(referer ?? "/");
         }
     }
 }

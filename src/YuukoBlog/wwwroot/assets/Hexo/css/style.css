@@ -623,11 +623,11 @@ a {
 #header .header-nav .social a.rss:hover {
   border: 1px solid #cf5d0f;
 }
-#header .header-nav .social a.github {
+.github {
   background: url("../img/github.png") center no-repeat #2aad2d;
   border: 1px solid #2aad2d;
 }
-#header .header-nav .social a.github:hover {
+.github:hover {
   border: 1px solid #2aad2d;
 }
 #header .header-nav .social a.facebook {

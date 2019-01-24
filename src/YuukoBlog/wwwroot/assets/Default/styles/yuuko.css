@@ -1200,7 +1200,7 @@ a, a:visited {
 
 .page-header-li {
     float: left;
-    width: 100px;
+    width: 130px;
     height: 80px;
     display: block;
     -webkit-transition: background-color .2s linear;
@@ -1284,67 +1284,67 @@ a, a:visited {
         background: #303030;
     }
 
-.page-header-li-frontend.page-header-li-active {
+.page-header-li-コミックファン.page-header-li-active {
     background: #1197c6;
 }
 
-    .page-header-li-frontend.page-header-li-active .page-header-li-s {
+    .page-header-li-コミックファン.page-header-li-active .page-header-li-s {
         background: #0e799e;
     }
 
-.page-header-li-frontend:hover {
+.page-header-li-コミックファン:hover {
     background: #0f88b2;
 }
 
-    .page-header-li-frontend:hover .page-header-li-s {
+    .page-header-li-コミックファン:hover .page-header-li-s {
         background: #0c6a8b;
     }
 
-.page-header-li-backend.page-header-li-active {
+.page-header-li-テクノロジー.page-header-li-active {
     background: #dd9056;
 }
 
-    .page-header-li-backend.page-header-li-active .page-header-li-s {
+    .page-header-li-テクノロジー.page-header-li-active .page-header-li-s {
         background: #cc6f29;
     }
 
-.page-header-li-backend:hover {
+.page-header-li-テクノロジー:hover {
     background: #d87f3c;
 }
 
-    .page-header-li-backend:hover .page-header-li-s {
+    .page-header-li-テクノロジー:hover .page-header-li-s {
         background: #b36124;
     }
 
-.page-header-li-design.page-header-li-active {
+.page-header-li-ゲームファン.page-header-li-active {
     background: #11b05b;
 }
 
-    .page-header-li-design.page-header-li-active .page-header-li-s {
+    .page-header-li-ゲームファン.page-header-li-active .page-header-li-s {
         background: #0e8d49;
     }
 
-.page-header-li-design:hover {
+.page-header-li-ゲームファン:hover {
     background: #0f9e52;
 }
 
-    .page-header-li-design:hover .page-header-li-s {
+    .page-header-li-ゲームファン:hover .page-header-li-s {
         background: #0c7b40;
     }
 
-.page-header-li-daily.page-header-li-active {
+.page-header-li-私の日課.page-header-li-active {
     background: #db6767;
 }
 
-    .page-header-li-daily.page-header-li-active .page-header-li-s {
+    .page-header-li-私の日課.page-header-li-active .page-header-li-s {
         background: #cf3333;
     }
 
-.page-header-li-daily:hover {
+.page-header-li-私の日課:hover {
     background: #d54d4d;
 }
 
-    .page-header-li-daily:hover .page-header-li-s {
+    .page-header-li-私の日課:hover .page-header-li-s {
         background: #b62b2b;
     }
 
@@ -1544,58 +1544,58 @@ body {
         color: #fff;
     }
 
-.body-frontend {
+.body-コミックファン {
     background-color: #1197c6;
 }
 
-    .body-frontend .post ::-moz-selection, .body-frontend .post-list ::-moz-selection {
+    .body-コミックファン .post ::-moz-selection, .body-コミックファン .post-list ::-moz-selection {
         background-color: #13ace1;
         color: #fff;
     }
 
-    .body-frontend .post ::selection, .body-frontend .post-list ::selection {
+    .body-コミックファン .post ::selection, .body-コミックファン .post-list ::selection {
         background-color: #13ace1;
         color: #fff;
     }
 
-.body-backend {
+.body-テクノロジー {
     background-color: #dd9056;
 }
 
-    .body-backend .post ::-moz-selection, .body-backend .post-list ::-moz-selection {
+    .body-テクノロジー .post ::-moz-selection, .body-テクノロジー .post-list ::-moz-selection {
         background-color: #e09b67;
         color: #fff;
     }
 
-    .body-backend .post ::selection, .body-backend .post-list ::selection {
+    .body-テクノロジー .post ::selection, .body-テクノロジー .post-list ::selection {
         background-color: #e09b67;
         color: #fff;
     }
 
-.body-design {
+.body-ゲームファン {
     background-color: #11b05b;
 }
 
-    .body-design .post ::-moz-selection, .body-design .post-list ::-moz-selection {
+    .body-ゲームファン .post ::-moz-selection, .body-ゲームファン .post-list ::-moz-selection {
         background-color: #14cd6a;
         color: #fff;
     }
 
-    .body-design .post ::selection, .body-design .post-list ::selection {
+    .body-ゲームファン .post ::selection, .body-ゲームファン .post-list ::selection {
         background-color: #14cd6a;
         color: #fff;
     }
 
-.body-daily {
+.body-私の日課 {
     background-color: #db6767;
 }
 
-    .body-daily .post ::-moz-selection, .body-daily .post-list ::-moz-selection {
+    .body-私の日課 .post ::-moz-selection, .body-私の日課 .post-list ::-moz-selection {
         background-color: #df7676;
         color: #fff;
     }
 
-    .body-daily .post ::selection, .body-daily .post-list ::selection {
+    .body-私の日課 .post ::selection, .body-私の日課 .post-list ::selection {
         background-color: #df7676;
         color: #fff;
     }
@@ -1743,42 +1743,42 @@ body {
         background: #575757;
     }
 
-.post-catalog-item-frontend a {
+.post-catalog-item-コミックファン a {
     border-color: #0e799e;
     background: #1197c6;
 }
 
-    .post-catalog-item-frontend a:hover {
+    .post-catalog-item-コミックファン a:hover {
         border-color: #0f88b2;
         background: #13ace1;
     }
 
-.post-catalog-item-backend a {
+.post-catalog-item-テクノロジー a {
     border-color: #cc6f29;
     background: #dd9056;
 }
 
-    .post-catalog-item-backend a:hover {
+    .post-catalog-item-テクノロジー a:hover {
         border-color: #d87f3c;
         background: #e09b67;
     }
 
-.post-catalog-item-design a {
+.post-catalog-item-ゲームファン a {
     border-color: #0e8d49;
     background: #11b05b;
 }
 
-    .post-catalog-item-design a:hover {
+    .post-catalog-item-ゲームファン a:hover {
         border-color: #0f9e52;
         background: #14cd6a;
     }
 
-.post-catalog-item-daily a {
+.post-catalog-item-私の日課 a {
     border-color: #cf3333;
     background: #db6767;
 }
 
-    .post-catalog-item-daily a:hover {
+    .post-catalog-item-私の日課 a:hover {
         border-color: #d54d4d;
         background: #df7676;
     }
@@ -1886,35 +1886,35 @@ body {
         background: #575757;
     }
 
-.sidebar-post-catalog-item-frontend a {
+.sidebar-post-catalog-item-コミックファン a {
     background: #26b9ec;
 }
 
-    .sidebar-post-catalog-item-frontend a:hover {
+    .sidebar-post-catalog-item-コミックファン a:hover {
         background: #13ace1;
     }
 
-.sidebar-post-catalog-item-backend a {
+.sidebar-post-catalog-item-テクノロジー a {
     background: #e4a678;
 }
 
-    .sidebar-post-catalog-item-backend a:hover {
+    .sidebar-post-catalog-item-テクノロジー a:hover {
         background: #e09b67;
     }
 
-.sidebar-post-catalog-item-design a {
+.sidebar-post-catalog-item-ゲームファン a {
     background: #18e979;
 }
 
-    .sidebar-post-catalog-item-design a:hover {
+    .sidebar-post-catalog-item-ゲームファン a:hover {
         background: #14cd6a;
     }
 
-.sidebar-post-catalog-item-daily a {
+.sidebar-post-catalog-item-私の日課 a {
     background: #e28585;
 }
 
-    .sidebar-post-catalog-item-daily a:hover {
+    .sidebar-post-catalog-item-私の日課 a:hover {
         background: #df7676;
     }
 
@@ -2168,4 +2168,48 @@ td input[type="text"], td input[type="password"] {
 
 #frmAjaxUpload {
     display: none;
+}
+.github {
+    background: url('../images/github.png') center no-repeat #2aad2d;
+    border: 1px solid #2aad2d;
+}
+.github:hover {
+    border: 1px solid #2aad2d;
+}
+
+.mail {
+    background: url('../images/mail.png') center no-repeat #c059e6;
+    border: 1px solid #c059e6;
+
+}
+.mail:hover {
+    border: 1px solid #c059e6;
+}
+.sina {
+   
+    background: url('../images/sinaweibo.png') center no-repeat #c82829;
+    border: 1px solid #c82829;
+    width: 10px
+}
+.sina:hover {
+    border: 1px solid #c82829;
+}
+.styleabout {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    text-indent: -9999px;
+    margin: 0 8px 15px 8px;
+    opacity: 0.7;
+    width: 28px;
+    height: 28px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
 }

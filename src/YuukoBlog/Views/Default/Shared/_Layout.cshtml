@@ -21,7 +21,7 @@
             <div class="page-header-bar">
                 <div class="cont-wrap">
                     <div class="grid_12">
-                        <a class="page-header-li page-header-li-home @(ViewBag.Position == "home" ? "page-header-li-active" : "")" href="/"><div class="page-header-li-s"><div class="page-header-li-si"></div></div><div class="page-header-li-t">主页</div><div class="page-header-li-d">HOME</div></a>
+                        <a class="page-header-li page-header-li-ホームページ @(ViewBag.Position == "ホームページ" ? "page-header-li-active" : "")" href="/"><div class="page-header-li-s"><div class="page-header-li-si"></div></div><div class="page-header-li-t">主页</div><div class="page-header-li-d">ホームページ</div></a>
                         @foreach (dynamic x in ViewBag.Catalogs)
                         {
                             <a class="page-header-li page-header-li-@x.Url.ToLower() @(ViewBag.Position == x.Url.ToLower() ? "page-header-li-active" : "")" href="/catalog/@x.Url/"><div class="page-header-li-s"><div class="page-header-li-si"></div></div><div class="page-header-li-t">@x.Title</div><div class="page-header-li-d">@x.Url.ToUpper()</div></a>
@@ -43,7 +43,7 @@
                                 }
                                 else
                                 {
-                                    <h1>@ViewBag.Title@(ViewBag.Position == "home" ? "" : (" » " + ViewBag.Position.ToUpper()))@(ViewContext.RouteData.Values["tag"] == null ? "" : (" » " + ViewContext.RouteData.Values["tag"].ToString().ToUpper()))@(ViewContext.RouteData.Values["year"] == null ? "" : (" » " + ViewContext.RouteData.Values["year"].ToString()))@(ViewContext.RouteData.Values["month"] == null ? "" : (" » " + ViewContext.RouteData.Values["month"].ToString()))@(ViewContext.RouteData.Values["p"] == null ? "" : (" » PAGE" + ViewContext.RouteData.Values["p"].ToString()))</h1>
+                                    <h1>@ViewBag.Title@(ViewBag.Position == "ホームページ" ? "" : (" » " + ViewBag.Position.ToUpper()))@(ViewContext.RouteData.Values["tag"] == null ? "" : (" » " + ViewContext.RouteData.Values["tag"].ToString().ToUpper()))@(ViewContext.RouteData.Values["year"] == null ? "" : (" » " + ViewContext.RouteData.Values["year"].ToString()))@(ViewContext.RouteData.Values["month"] == null ? "" : (" » " + ViewContext.RouteData.Values["month"].ToString()))@(ViewContext.RouteData.Values["p"] == null ? "" : (" » PAGE" + ViewContext.RouteData.Values["p"].ToString()))</h1>
                                 }
                             </div>
                         </div>
@@ -57,29 +57,19 @@
             @RenderBody()
         </div>
         <div class="page-footer">
-            <a class="footer-rss-wrap" href="/blog/feed" target="_blank" yuuko-static><span class="footer-rss icon-feed"></span></a>
+            @* <a class="footer-rss-wrap" href="/blog/feed" target="_blank" yuuko-static><span class="footer-rss icon-feed"></span></a> *@
             <div class="cont-wrap">
                 <div class="grid_12">
                     <div class="copyright">
                         <p>
-                            Copyright © 2016 <a href="http://www.1234.sh" target="_self">Amamiya Yuuko</a>, all rights reserved. 黑ICP备15005987号.
+                            Copyright © 2016 <a href="http://www.pomelobutter.cn" target="_self">Pomelobutter</a>, all rights reserved. 陕ICP备18012083号
                         </p>
-                        <p>Powered by <a href="https://github.com/PomeloFoundation/YuukoBlog" target="_blank" yuuko-static>YuukoBlog</a>, Template: 
-                            <select id="lstTemplate">
-                                @foreach (var t in Template.Collection.Templates)
-                                {
-                                    <!option @(Template.Current.Identifier == t.Identifier ? "selected" : "") value="@t.Identifier">@t.Title</!option>
-                                }
-                            </select>
-                        @if (!Html.IsAdmin())
-                        {
-                            <a href="/admin/login" target="_self">Manage</a>
-                        }
+                        <p>
+                            Powered by <a href="https://github.com/PomeloFoundation/YuukoBlog" target="_blank" yuuko-static>Yuuko'blog</a>
                         </p>
+                        <p>Yuuko is a super idol on my programming road.</p>
                     </div>
-                    <div class="azure">
-                        <a target="_blank" href="http://www.azure.com/"><img src="~/assets/Default/images/azure.png" class="azure-logo" alt="Hosted on Microsoft Azure" /></a>
-                    </div>
+                    
                 </div><div class="clear"></div>
             </div>
         </div>
